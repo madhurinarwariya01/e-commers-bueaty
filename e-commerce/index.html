@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Beauty - Beauty Products</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#ff00ff',secondary:'#00ffff'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 w-full z-50 frosted-glass">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-3xl font-['Pacifico'] text-white neon-text">logo</a>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-primary transition-colors">Home</a>
+                    <a href="#" class="text-white hover:text-primary transition-colors">Shop</a>
+                    <a href="#" class="text-white hover:text-primary transition-colors">Categories</a>
+                    <a href="#" class="text-white hover:text-primary transition-colors">New Arrivals</a>
+                    <a href="#" class="text-white hover:text-primary transition-colors">Deals</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <div class="flex items-center frosted-glass rounded-full pr-4">
+                            <input type="text" placeholder="Search products..." class="bg-transparent border-none outline-none py-2 px-4 text-white w-40 md:w-60">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <i class="ri-search-line text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full frosted-glass neon-border">
+                        <i class="ri-shopping-bag-line text-white"></i>
+                    </div>
+                    
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full frosted-glass neon-border">
+                        <i class="ri-user-line text-white"></i>
+                    </div>
+                    
+                    <div class="md:hidden w-10 h-10 flex items-center justify-center">
+                        <i class="ri-menu-line text-white text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 hero-bg relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full" style="background-image: url('https://readdy.ai/api/search-image?query=luxury%20beauty%20products%20with%20neon%20pink%20and%20blue%20lights%2C%20dark%20background%2C%20high-end%20cosmetics%20with%20glowing%20effects%2C%20premium%20skincare%20products%20with%20neon%20lighting%2C%20professional%20studio%20photography%2C%20high%20contrast%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.5;"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 neon-gradient">Illuminate Your Beauty</h1>
+                    <p class="text-lg mb-8 text-gray-200 max-w-lg">Discover our exclusive collection of premium beauty products that will make you glow like never before. Limited time offer: 25% off on all new arrivals.</p>
+                    <div class="flex space-x-4">
+                        <button class="neon-button bg-primary text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">Shop Now</button>
+                        <button class="frosted-glass text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">Explore Collection</button>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <div class="floating-neon">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20beauty%20product%20with%20neon%20glow%2C%20premium%20skincare%20serum%20bottle%20with%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20transparent%20glass%20bottle&width=600&height=600&seq=2&orientation=squarish" alt="Featured Product" class="mx-auto rounded-xl neon-glow">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent"></div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 neon-gradient text-center">Shop By Category</h2>
+            
+            <div class="flex overflow-x-auto pb-4 space-x-6 hide-scrollbar">
+                <div class="category-card flex-shrink-0 flex flex-col items-center transition-all duration-300">
+                    <div class="w-24 h-24 rounded-full frosted-glass flex items-center justify-center mb-3 neon-border">
+                        <i class="ri-eye-line text-3xl text-primary"></i>
+                    </div>
+                    <span class="text-white">Makeup</span>
+                </div>
+                
+                <div class="category-card flex-shrink-0 flex flex-col items-center transition-all duration-300">
+                    <div class="w-24 h-24 rounded-full frosted-glass flex items-center justify-center mb-3 neon-border">
+                        <i class="ri-drop-line text-3xl text-primary"></i>
+                    </div>
+                    <span class="text-white">Skincare</span>
+                </div>
+                
+                <div class="category-card flex-shrink-0 flex flex-col items-center transition-all duration-300">
+                    <div class="w-24 h-24 rounded-full frosted-glass flex items-center justify-center mb-3 neon-border">
+                        <i class="ri-ink-bottle-line text-3xl text-primary"></i>
+                    </div>
+                    <span class="text-white">Fragrances</span>
+                </div>
+                
+                <div class="category-card flex-shrink-0 flex flex-col items-center transition-all duration-300">
+                    <div class="w-24 h-24 rounded-full frosted-glass flex items-center justify-center mb-3 neon-border">
+                        <i class="ri-brush-line text-3xl text-primary"></i>
+                    </div>
+                    <span class="text-white">Hair Care</span>
+                </div>
+                
+                <div class="category-card flex-shrink-0 flex flex-col items-center transition-all duration-300">
+                    <div class="w-24 h-24 rounded-full frosted-glass flex items-center justify-center mb-3 neon-border">
+                        <i class="ri-hand-heart-line text-3xl text-primary"></i>
+                    </div>
+                    <span class="text-white">Body Care</span>
+                </div>
+                
+                <div class="category-card flex-shrink-0 flex flex-col items-center transition-all duration-300">
+                    <div class="w-24 h-24 rounded-full frosted-glass flex items-center justify-center mb-3 neon-border">
+                        <i class="ri-gift-line text-3xl text-primary"></i>
+                    </div>
+                    <span class="text-white">Gift Sets</span>
+                </div>
+                
+                <div class="category-card flex-shrink-0 flex flex-col items-center transition-all duration-300">
+                    <div class="w-24 h-24 rounded-full frosted-glass flex items-center justify-center mb-3 neon-border">
+                        <i class="ri-leaf-line text-3xl text-primary"></i>
+                    </div>
+                    <span class="text-white">Natural</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold neon-gradient">New Arrivals</h2>
+                <a href="#" class="text-primary flex items-center">
+                    <span>View All</span>
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card frosted-glass rounded-lg p-4 transition-all duration-300">
+                    <div class="relative mb-4 overflow-hidden rounded-lg">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20pink%20serum%20bottle%20with%20neon%20glow%2C%20premium%20skincare%20product%20with%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20transparent%20glass%20bottle&width=400&height=400&seq=3&orientation=squarish" alt="Radiance Serum" class="w-full h-60 object-cover product-image">
+                        <div class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-heart-line text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold mb-2">Radiance Boost Serum</h3>
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <span class="text-sm text-gray-400 ml-2">(128)</span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-lg font-bold text-white">$89.99</span>
+                            <span class="text-sm text-gray-400 line-through ml-2">$119.99</span>
+                        </div>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white neon-glow whitespace-nowrap !rounded-button">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card frosted-glass rounded-lg p-4 transition-all duration-300">
+                    <div class="relative mb-4 overflow-hidden rounded-lg">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20eyeshadow%20palette%20with%20neon%20glow%2C%20premium%20makeup%20product%20with%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20metallic%20case&width=400&height=400&seq=4&orientation=squarish" alt="Eyeshadow Palette" class="w-full h-60 object-cover product-image">
+                        <div class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-heart-line text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold mb-2">Neon Dreams Eyeshadow Palette</h3>
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-sm text-gray-400 ml-2">(94)</span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-lg font-bold text-white">$65.00</span>
+                            <span class="text-sm text-gray-400 line-through ml-2">$85.00</span>
+                        </div>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white neon-glow whitespace-nowrap !rounded-button">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card frosted-glass rounded-lg p-4 transition-all duration-300">
+                    <div class="relative mb-4 overflow-hidden rounded-lg">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20perfume%20bottle%20with%20neon%20glow%2C%20premium%20fragrance%20product%20with%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20elegant%20glass%20bottle&width=400&height=400&seq=5&orientation=squarish" alt="Perfume" class="w-full h-60 object-cover product-image">
+                        <div class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-heart-line text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold mb-2">Electric Bloom Eau de Parfum</h3>
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                        </div>
+                        <span class="text-sm text-gray-400 ml-2">(76)</span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-lg font-bold text-white">$120.00</span>
+                        </div>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white neon-glow whitespace-nowrap !rounded-button">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold neon-gradient">Best Sellers</h2>
+                <a href="#" class="text-primary flex items-center">
+                    <span>View All</span>
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card frosted-glass rounded-lg p-4 transition-all duration-300">
+                    <div class="relative mb-4 overflow-hidden rounded-lg">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20face%20mask%20jar%20with%20neon%20glow%2C%20premium%20skincare%20product%20with%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20elegant%20glass%20jar&width=400&height=400&seq=6&orientation=squarish" alt="Face Mask" class="w-full h-60 object-cover product-image">
+                        <div class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-heart-line text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold mb-2">Hydra Glow Overnight Mask</h3>
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-sm text-gray-400 ml-2">(215)</span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-lg font-bold text-white">$58.00</span>
+                        </div>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white neon-glow whitespace-nowrap !rounded-button">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card frosted-glass rounded-lg p-4 transition-all duration-300">
+                    <div class="relative mb-4 overflow-hidden rounded-lg">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20lipstick%20with%20neon%20glow%2C%20premium%20makeup%20product%20with%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20metallic%20case&width=400&height=400&seq=7&orientation=squarish" alt="Lipstick" class="w-full h-60 object-cover product-image">
+                        <div class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-heart-line text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold mb-2">Velvet Neon Matte Lipstick</h3>
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <span class="text-sm text-gray-400 ml-2">(178)</span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-lg font-bold text-white">$32.00</span>
+                            <span class="text-sm text-gray-400 line-through ml-2">$42.00</span>
+                        </div>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white neon-glow whitespace-nowrap !rounded-button">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card frosted-glass rounded-lg p-4 transition-all duration-300">
+                    <div class="relative mb-4 overflow-hidden rounded-lg">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20hair%20oil%20bottle%20with%20neon%20glow%2C%20premium%20hair%20care%20product%20with%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20elegant%20glass%20dropper%20bottle&width=400&height=400&seq=8&orientation=squarish" alt="Hair Oil" class="w-full h-60 object-cover product-image">
+                        <div class="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-heart-line text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-lg font-semibold mb-2">Luminous Repair Hair Oil</h3>
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                        </div>
+                        <span class="text-sm text-gray-400 ml-2">(142)</span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-lg font-bold text-white">$45.00</span>
+                        </div>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white neon-glow whitespace-nowrap !rounded-button">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-4">
+            <div class="rounded-xl overflow-hidden relative">
+                <div class="absolute top-0 left-0 w-full h-full" style="background-image: url('https://readdy.ai/api/search-image?query=luxury%20beauty%20products%20with%20neon%20pink%20and%20blue%20lights%2C%20dark%20background%2C%20high-end%20cosmetics%20with%20glowing%20effects%2C%20premium%20skincare%20products%20arranged%20artistically%20with%20neon%20lighting%2C%20professional%20studio%20photography%2C%20high%20contrast%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20wide%20panoramic%20shot&width=1920&height=600&seq=9&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.7;"></div>
+                
+                <div class="relative z-10 py-16 px-8 md:px-16">
+                    <div class="max-w-lg">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-gradient">Limited Time Offer</h2>
+                        <p class="text-lg mb-6 text-white">Get 30% off on our exclusive collection of premium beauty products. Use code NEON30 at checkout.</p>
+                        <button class="neon-button bg-primary text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">Shop the Collection</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 neon-gradient text-center">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="frosted-glass rounded-lg p-6">
+                    <div class="flex text-primary mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    
+                    <p class="text-gray-200 mb-6">"The Radiance Boost Serum has completely transformed my skin. I've been using it for just two weeks and already see a significant improvement in my skin's texture and glow."</p>
+                    
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-4">
+                            <span class="text-white font-semibold">EM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Emily Richardson</h4>
+                            <p class="text-sm text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="frosted-glass rounded-lg p-6">
+                    <div class="flex text-primary mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    
+                    <p class="text-gray-200 mb-6">"I'm obsessed with the Neon Dreams Eyeshadow Palette! The colors are so pigmented and the shimmer effect is absolutely stunning. Worth every penny!"</p>
+                    
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-4">
+                            <span class="text-white font-semibold">JT</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Jessica Thompson</h4>
+                            <p class="text-sm text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="frosted-glass rounded-lg p-6">
+                    <div class="flex text-primary mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                    
+                    <p class="text-gray-200 mb-6">"The Electric Bloom perfume has quickly become my signature scent. I receive compliments every time I wear it. The bottle design is also absolutely gorgeous!"</p>
+                    
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-4">
+                            <span class="text-white font-semibold">AW</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Alexandra Williams</h4>
+                            <p class="text-sm text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Instagram Section -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 neon-gradient text-center">Follow Us on Instagram</h2>
+            <p class="text-center text-gray-300 mb-10">@glowbeauty</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="aspect-square overflow-hidden rounded-lg">
+                    <img src="https://readdy.ai/api/search-image?query=person%20applying%20luxury%20beauty%20product%20with%20neon%20glow%2C%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20instagram%20style&width=300&height=300&seq=10&orientation=squarish" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg">
+                    <img src="https://readdy.ai/api/search-image?query=luxury%20beauty%20product%20flatlay%20with%20neon%20glow%2C%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20products%20arranged%20artistically%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20instagram%20style&width=300&height=300&seq=11&orientation=squarish" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg">
+                    <img src="https://readdy.ai/api/search-image?query=person%20with%20glowing%20makeup%20and%20neon%20lights%2C%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20beauty%20look%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20advertisement%2C%20instagram%20style&width=300&height=300&seq=12&orientation=squarish" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg">
+                    <img src="https://readdy.ai/api/search-image?query=luxury%20beauty%20products%20with%20water%20splash%20and%20neon%20glow%2C%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20products%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20instagram%20style&width=300&height=300&seq=13&orientation=squarish" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg hidden md:block">
+                    <img src="https://readdy.ai/api/search-image?query=close-up%20of%20eye%20with%20glowing%20neon%20makeup%2C%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20beauty%20look%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20advertisement%2C%20instagram%20style&width=300&height=300&seq=14&orientation=squarish" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-lg hidden md:block">
+                    <img src="https://readdy.ai/api/search-image?query=luxury%20beauty%20product%20unboxing%20with%20neon%20glow%2C%20pink%20and%20blue%20neon%20light%20effects%2C%20dark%20background%2C%20high-end%20cosmetic%20product%20packaging%2C%20professional%20studio%20photography%2C%20dramatic%20lighting%2C%20beauty%20product%20advertisement%2C%20instagram%20style&width=300&height=300&seq=15&orientation=squarish" alt="Instagram Post" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 relative">
+        <div class="container mx-auto px-4">
+            <div class="frosted-glass rounded-xl p-8 md:p-12">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-4 neon-gradient">Join Our Glow Community</h2>
+                    <p class="text-gray-200 mb-8">Subscribe to our newsletter for exclusive offers, beauty tips, and early access to new products.</p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                        <input type="email" placeholder="Your email address" class="frosted-glass border-none outline-none py-3 px-4 rounded-button w-full text-white">
+                        <button class="neon-button bg-primary text-white px-8 py-3 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+                    </div>
+                    
+                    <div class="mt-4 text-sm text-gray-400">
+                        <label class="flex items-center justify-center">
+                            <input type="checkbox" class="custom-checkbox" id="newsletter-consent">
+                            <span class="custom-checkbox-label">I agree to receive marketing emails and accept the privacy policy</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="pt-16 pb-8 relative">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="text-3xl font-['Pacifico'] text-white neon-text mb-6 inline-block">logo</a>
+                    <p class="text-gray-300 mb-6">Illuminate your beauty with our premium collection of high-quality beauty products.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-facebook-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-twitter-x-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full frosted-glass">
+                            <i class="ri-tiktok-line text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Shop</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">All Products</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">New Arrivals</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Best Sellers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">On Sale</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Gift Sets</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">About</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Ingredients</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Press</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Customer Service</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">FAQs</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Track Order</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 Glow Beauty. All rights reserved.</p>
+                    
+                    <div class="flex space-x-6">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-visa-fill text-2xl text-gray-300"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-mastercard-fill text-2xl text-gray-300"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-paypal-fill text-2xl text-gray-300"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-apple-fill text-2xl text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Neon Elements -->
+    <div class="fixed top-1/4 left-10 w-20 h-20 rounded-full bg-primary opacity-10 blur-3xl floating-neon"></div>
+    <div class="fixed top-2/3 right-10 w-32 h-32 rounded-full bg-secondary opacity-10 blur-3xl floating-neon" style="animation-delay: 2s;"></div>
+    <div class="fixed bottom-1/4 left-1/3 w-24 h-24 rounded-full bg-primary opacity-10 blur-3xl floating-neon" style="animation-delay: 4s;"></div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
